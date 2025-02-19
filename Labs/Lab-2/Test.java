@@ -49,7 +49,7 @@ public class Test{
 
 
 		// Circle.
-		System.out.printf("%n|----------------Circle-------------|%n%n");
+		System.out.printf("%n|----------------Circle--------------|%n%n");
 
 		Circle cir = new Circle();
 
