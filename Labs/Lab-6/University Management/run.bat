@@ -1,0 +1,2 @@
+javac -d out src/com/comsats/SystemUnit/SystemUnit.java src/com/comsats/University/University.java src/com/comsats/Employee/Employee.java src/com/comsats/Lab/Lab.java src/com/comsats/Department/Department.java src/com/comsats/Campus/Campus.java src/com/comsats/Main/Main.java
+java -cp out com.comsats.Main.Main
