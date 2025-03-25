@@ -1,14 +1,15 @@
 package com.comsats.Campus;
 
 import com.comsats.Department.Department;
+import com.comsats.Employee.Employee;
 import java.util.Arrays;
 
 public class Campus {
     private String name;
     private Department[] departments;
-    private String directorName;
+    private Employee directorName;
 
-    public Campus(String name, Department[] departments, String directorName) {
+    public Campus(String name, Department[] departments, Employee directorName) {
         this.name = name;
         this.directorName = directorName;
         this.departments = new Department[departments.length];
@@ -20,9 +21,11 @@ public class Campus {
 
     public Campus() {}
 
-    @Override
-    public String toString() {
-        return "Campus Name: " + name + "\nDirector: " + directorName +
-               "\nDepartments: " + Arrays.toString(departments);
-    }
+@Override
+public String toString() {
+    return "\nCampus: " + name + 
+           "\n  Director: " + directorName +
+           "\n  Departments: " + Arrays.toString(departments).replace(",", "").replace("[", "").replace("]", "");
+}
+
 }

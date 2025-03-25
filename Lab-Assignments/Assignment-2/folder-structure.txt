@@ -1,0 +1,55 @@
+Folder PATH listing
+Volume serial number is C2FB-9627
+C:.
+|   folder-structure.txt
+|   Output.png
+|   run.bat
+|   
++---bin
+|   \---com
+|       \---school
+|           +---Classroom
+|           |       Classroom.class
+|           |       
+|           +---Main
+|           |       Main.class
+|           |       
+|           +---Person
+|           |       Person.class
+|           |       
+|           +---Principal
+|           |       Principal.class
+|           |       
+|           +---School
+|           |       School.class
+|           |       
+|           +---Student
+|           |       Student.class
+|           |       
+|           \---Teacher
+|                   Teacher.class
+|                   
+\---src
+    \---com
+        \---school
+            +---Classroom
+            |       Classroom.java
+            |       
+            +---Main
+            |       Main.java
+            |       
+            +---Person
+            |       Person.java
+            |       
+            +---Principal
+            |       Principal.java
+            |       
+            +---School
+            |       School.java
+            |       
+            +---Student
+            |       Student.java
+            |       
+            \---Teacher
+                    Teacher.java
+                    

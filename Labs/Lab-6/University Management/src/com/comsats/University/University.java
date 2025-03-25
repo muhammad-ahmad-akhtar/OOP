@@ -16,9 +16,10 @@ public class University {
         }
     }
 
-    @Override
-    public String toString() {
-        return "University Name: " + universityName +
-               "\nCampuses: " + Arrays.toString(campuses);
-    }
+@Override
+public String toString() {
+    return "University Name: " + universityName +
+           "\nCampuses:\n" + Arrays.toString(campuses).replace(",", "").replace("[", "").replace("]", "");
+}
+
 }

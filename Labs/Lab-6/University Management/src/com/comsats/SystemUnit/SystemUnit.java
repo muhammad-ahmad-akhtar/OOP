@@ -50,7 +50,7 @@ public class SystemUnit{
 
 	@Override
 	public String toString() {
-		return String.format("\nSystem Details: \nCPU Name: %s\nRAM Size: %s\nDisk Size: %s\nSystem ID: %s\nLCD Model: %s\n", cpuName, ramSize, diskSize, systemId, lcdModel);
+		return null; //String.format("\nSystem Details: \nCPU Name: %s\nRAM Size: %s\nDisk Size: %s\nSystem ID: %s\nLCD Model: %s\n", cpuName, ramSize, diskSize, systemId, lcdModel);
 	}
 
 }

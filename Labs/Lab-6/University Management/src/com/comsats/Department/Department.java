@@ -23,11 +23,12 @@ public class Department {
 
     public Department() {}
 
-    @Override
-    public String toString() {
-        return "Department Name: " + name + 
-               "\nHead of Department: " + hod +
-               "\nLab Incharge: " + labIncharge +
-               "\nLabs: " + Arrays.toString(labs);
-    }
+@Override
+public String toString() {
+    return "\nDepartment: " + name + 
+           "\n  Head of Department: " + hod +
+           "\n  Lab Incharge: " + labIncharge +
+           "\n  Labs: " + Arrays.toString(labs).replace(",", "").replace("[", "").replace("]", "");
+}
+
 }
