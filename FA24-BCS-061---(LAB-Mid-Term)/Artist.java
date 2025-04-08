@@ -9,7 +9,7 @@ public class Artist extends Person{
 
 	@Override
 	public String toString() {
-		return this.name + " has " + this.genre + " in genre.";
+		return " - Name: " + this.name + ", Genre: " + this.genre;
 	}
 
 }

@@ -9,6 +9,6 @@ public class Librarian extends Person{
 
 	@Override
 	public String toString() {
-		return this.name + " has " + this.yearsOfService + " years of service.";
+		return "Librarian: Name: " + this.name + ", Years of Service: " + this.yearsOfService + "\n";
 	}
 }

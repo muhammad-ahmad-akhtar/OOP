@@ -12,7 +12,7 @@ public class Track {
 
 	@Override
 	public String toString() {
-		return this.title + " has " + this.trackId + " of TrackId " + this.artist;
+		return "  - \"" + this.title + "\"  (ID: " + this.trackId + ")" + artist.toString();
 	}
 
 	@Override
