@@ -6,4 +6,14 @@ public class PermitHolder extends Person{
         super(name);
         this.id = count++;
     }
+
+    public int getPermitId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + super.getName() + ", Permit ID: " + id;
+    }    
+
 }

@@ -1,21 +1,20 @@
-public class Owner extends Person{
+
+
+class Owner extends Person {
+    private static int counter = 1;
+    private String ownerId;
 
     public Owner(String name) {
         super(name);
+        this.ownerId = String.format("O%03d", counter++);
     }
 
-    public Owner(Owner owner) {
-        super(owner.getName());
+    public String getOwnerId() {
+        return ownerId;
     }
 
     @Override
-    public boolean equals(Object obj) {
-
-        if(obj == null){ return false; }
-        if(!(obj instanceof Owner)) { return false; }
-
-        Owner other = (Owner) obj;
-
-        return this.getName().equals(other.getName());
+    public String toString() {
+        return "Name: " + this.getName() + ", Permit ID: " + ownerId + " ";
     }
 }

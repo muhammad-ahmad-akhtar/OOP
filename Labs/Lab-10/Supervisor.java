@@ -13,4 +13,9 @@ public class Supervisor extends Person {
     public void setNumOfYears(int numOfYears) {
         this.numOfYears = numOfYears;
     }
+
+    @Override
+    public String toString() {
+        return "Supervisor: " + super.getName() + ", Experience: " + numOfYears + " years";
+    }
 }

@@ -1,42 +1,49 @@
-public class Vehicle {
-    String liscencePlate;
-    String type;
-    Owner owner;
 
-//    Vehicle[] vehicle = new Vehicle[10];
-//    private int indexOfVehicle = 0;
-//
-//    private boolean checkDuplicateVehicles(String liscencePlate, String type, Owner owner){
-//        boolean isTrue = false;
-//        for(int i = 0; i < indexOfVehicle; i++){
-//            if (
-//                    (vehicle[indexOfVehicle].liscencePlate == liscencePlate) && (vehicle[indexOfVehicle].type == type) && (vehicle[indexOfVehicle].owner.equals(owner))
-//            ) {
-//
-//                return true;
-//            }
-//        }
-//
-//        if(!isTrue){
-//            return false;
-//        }
-//        else{
-//            return true;
-//        }
-//    }
+class Vehicle {
+    private String licensePlate;
+    private String type;
+    private Owner owner;
 
-    public Vehicle(String liscencePlate, String type, Owner owner) {
-//        if(!checkDuplicateVehicles(liscencePlate, type, owner)) {
-//            this.liscencePlate = liscencePlate;
-//            this.type = type;
-//            this.owner = new Owner(owner);
-//            //vehicle[indexOfVehicle].owner = new Owner(owner);
-//            //vehicle[indexOfVehicle].type = type;
-//            //vehicle[indexOfVehicle].liscencePlate = liscencePlate;
-//            //indexOfVehicle++;
-//        }
-        this.liscencePlate = liscencePlate;
-        this.type = type;
-        this.owner = new Owner(owner);
+    private static String[] liscences = new String[10];
+    private static int liscencesIndex = 0;
+
+    public Vehicle(String licensePlate, String type, Owner owner) {
+        boolean isTrue = true;
+        for(int i = 0; i < 10; i++){
+            if(liscences[i] == licensePlate){
+                System.out.println("Error: Duplicate Liscence Plate " + licensePlate + " is not allowed.");
+                isTrue = false;
+                break;
+            }
+        }
+        if(isTrue){
+            this.licensePlate = licensePlate;
+            this.type = type;
+            this.owner = owner;
+
+            liscences[liscencesIndex++] = licensePlate;
+        }
+    }
+
+    public String getLicensePlate() {
+        return licensePlate;
+    }
+
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public Vehicle shallowCopy() {
+        return new Vehicle(licensePlate, type, owner);
+    }
+
+    public Vehicle deepCopy() {
+        Owner newOwner = new Owner(owner.getName());
+        return new Vehicle(licensePlate, type, newOwner);
+    }
+
+    @Override
+    public String toString() {
+        return "Liscence Plate: " + licensePlate + ", Type: " + type + ", Owner: [" + owner + "] ";
     }
 }
