@@ -25,6 +25,6 @@ public class MusicLibrary {
 
 	@Override
 	public String toString() {
-		return this.name + " has Music Library.java";
+		return "Music Library: " + this.name + "\n" + librarian.toString();
 	}
 }

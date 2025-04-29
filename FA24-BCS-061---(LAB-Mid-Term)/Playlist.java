@@ -18,9 +18,10 @@ public class Playlist {
 	@Override
 	public String toString() {
 		StringBuilder str = new StringBuilder();
-		str.append("Playlist: " + this.title + " (" + this.genre + ")");
-		for(int i = 0; i < 1; i++) {
-			str.append("\n - " + this.title + " (ID: T001" + ")  - Name: <to be done>");
+		str.append("Playlist: " + this.title + " (" + this.genre + ")\n");
+		for(int i = 0; i < tracks.length; i++) {
+			str.append(tracks[i].toString());
+			str.append("\n");
 		}
 		return str.toString();
 	}
